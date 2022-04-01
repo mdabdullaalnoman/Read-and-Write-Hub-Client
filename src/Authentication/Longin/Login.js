@@ -1,10 +1,25 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
 
+    const [loginInfo, setloginInfo] = useState({})
+    const navigation = useNavigate()
+    const location = useLocation()
+    console.log(loginInfo);
 
+    const handleInput = e => {
+        e.preventDefault()
+        const field = e.target.name;
+        const value = e.target.value;
+        setloginInfo(prev => ({ ...prev, [field]: value }))
+    }
+    const handleForm = e => {
+        e.preventDefault()
+
+        console.log(loginInfo);
+    }
 
     return (
         <div className="flex justify-center min-h-screen mb-20">
@@ -22,26 +37,28 @@ const Login = () => {
                     <p className="text-gray-500">Sign in to access your account</p>
                 </div>
                 <div className="m-6">
-                    <form className="mb-4">
+                    <form onSubmit={handleForm} className="mb-4">
                         <div className="mb-6">
-                            <label for="email" className="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email Address</label>
+                            <label htmlFor="email" className="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email Address</label>
                             <input
                                 type="email"
                                 name="email"
                                 id="email"
+                                onChange={handleInput}
                                 required
                                 placeholder="Your email address"
                                 className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
                         </div>
                         <div className="mb-6">
                             <div className="flex justify-between mb-2">
-                                <label for="password" className="text-sm text-gray-600 dark:text-gray-400">Password</label>
+                                <label htmlFor="password" className="text-sm text-gray-600 dark:text-gray-400">Password</label>
                                 <a href="#!" className="text-sm text-gray-400 focus:outline-none focus:text-indigo-500 hover:text-indigo-500 dark:hover:text-indigo-300">Forgot password?</a>
                             </div>
                             <input
                                 type="password"
                                 required
                                 name="password"
+                                onChange={handleInput}
                                 id="password"
                                 placeholder="Your password"
                                 className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
