@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "title": "Just a Standard Format Post.",
+        "description": "Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua",
+        "date": "22-22-2022",
+        "category": "Health",
+        "sub_category": "cooking",
+        "imgURL": "https://i.ibb.co/vjThW2q/blog-post-catagory-1.png"
+    },
+    {
+        "id": 2,
+        "title": "Just a Standard Format Post.",
+        "description": "Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua",
+        "date": "22-22-2022",
+        "category": "Health",
+        "sub_category": "cooking",
+        "imgURL": "https://i.ibb.co/JRLyZk4/blog-post-category-long-1.png"
+    },
+    {
+        "id": 3,
+        "title": "Just a Standard Format Post.",
+        "description": "Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua",
+        "date": "22-22-2022",
+        "category": "Health",
+        "sub_category": "cooking",
+        "imgURL": "https://i.ibb.co/JRLyZk4/blog-post-category-long-1.png"
+    },
+    {
+        "id": 4,
+        "title": "Just a Standard Format Post.",
+        "description": "Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua",
+        "date": "22-22-2022",
+        "category": "Health",
+        "sub_category": "cooking",
+        "imgURL": "https://i.ibb.co/JRLyZk4/blog-post-category-long-1.png"
+    },
+    {
+        "id": 5,
+        "title": "Just a Standard Format Post.",
+        "description": "Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua",
+        "date": "22-22-2022",
+        "category": "Health",
+        "sub_category": "cooking",
+        "imgURL": "https://i.ibb.co/JRLyZk4/blog-post-category-long-1.png"
+    },
+    {
+        "id": 6,
+        "title": "Just a Standard Format Post.",
+        "description": "Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua",
+        "date": "22-22-2022",
+        "category": "Health",
+        "sub_category": "cooking",
+        "imgURL": "https://i.ibb.co/JRLyZk4/blog-post-category-long-1.png"
+    },
+    {
+        "id": 7,
+        "title": "Just a Standard Format Post.",
+        "description": "Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua",
+        "date": "22-22-2022",
+        "category": "Health",
+        "sub_category": "cooking",
+        "imgURL": "https://i.ibb.co/JRLyZk4/blog-post-category-long-1.png"
+    }
+]
