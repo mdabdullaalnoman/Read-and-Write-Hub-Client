@@ -1,13 +1,14 @@
 import React from 'react';
 import Header from '../../SharedComponent/Header';
 import Hero from './Hero';
-import TestAuth from './TestAuth';
+import Post from './Post';
+
 
 const Home = () => {
     return (
         <div>
             <Header />
-            <TestAuth />
+            <Post />
             <Hero />
         </div>
     );
