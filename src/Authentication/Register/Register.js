@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 
 
 const Register = () => {
-
+    const navigate = useNavigate()
+    const { createUser } = useAuth()
     const [regInfo, setregInfo] = useState({})
 
     const handleInput = e => {
@@ -15,7 +17,8 @@ const Register = () => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        console.log(regInfo);
+        console.log(regInfo?.email, regInfo?.password, regInfo?.name, navigate);
+
     }
 
     return (

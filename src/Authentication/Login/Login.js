@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 
 
 const Login = () => {
@@ -7,7 +8,8 @@ const Login = () => {
     const [loginInfo, setloginInfo] = useState({})
     const navigation = useNavigate()
     const location = useLocation()
-    console.log(loginInfo);
+
+    const { googleSignIn, emailSignIn } = useAuth()
 
     const handleInput = e => {
         e.preventDefault()
@@ -17,8 +19,7 @@ const Login = () => {
     }
     const handleForm = e => {
         e.preventDefault()
-
-        console.log(loginInfo);
+        emailSignIn(loginInfo?.email, loginInfo?.password, navigation, location)
     }
 
     return (
@@ -80,6 +81,7 @@ const Login = () => {
 
                     <div className="flex flex-row gap-2">
                         <button
+                            onClick={googleSignIn}
                             className="bg-green-600 text-white w-full p-2 flex flex-row justify-center gap-2 items-center rounded-sm hover:bg-green-600 duration-100 ease-in-out">
                             Google
                         </button>
