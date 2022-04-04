@@ -17,7 +17,7 @@ const PopularPosts = () => {
 
     </div>
 	<div className="grid grid-cols-3 gap-4">
-	<div class="flex flex-col ml-12">
+	<div className="flex flex-col ml-12">
   
 	  <div className="flex flex-cols-2 gap-4">
 		<div className="mb-12">
@@ -52,7 +52,7 @@ const PopularPosts = () => {
 	</div>
 	</div>
 </div>
-	<div class="flex flex-col ml-12">
+	<div className="flex flex-col ml-12">
   <div>
   <div className="flex flex-cols-2 gap-4">
 		<div className="mb-12">
