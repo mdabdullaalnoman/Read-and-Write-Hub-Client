@@ -9,6 +9,7 @@ import AuthProvider from './Context/AuthProvider';
 import About from './Pages/About.js/About';
 import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
+import WriteBlog from './Pages/WriteBlog/WriteBlog';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="about" element={<About />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="writeblog" element={<WriteBlog />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
