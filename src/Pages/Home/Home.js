@@ -1,18 +1,18 @@
 import React from 'react';
-import Header from '../../SharedComponent/Header';
 import Footer from '../../SharedComponent/Footer';
-import Hero from './Hero';
+import Header from '../../SharedComponent/Header';
 import PopularPosts from '../../SharedComponent/PopularPosts';
-import Post from './Post';
 import Tags from '../../SharedComponent/Tags';
+import Hero from './Hero';
+import Post from './Post';
 
 
 const Home = () => {
     return (
         <div>
             <Header />
-            <Post />
             <Hero />
+            <Post />
             <PopularPosts />
             <Tags />
             <Footer />
