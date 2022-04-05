@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import Footer from '../../SharedComponent/Footer';
+import Header from '../../SharedComponent/Header';
+import PopularPosts from '../../SharedComponent/PopularPosts';
+import Tags from '../../SharedComponent/Tags';
 
 const WriteBlog = () => {
 
@@ -18,6 +22,8 @@ const WriteBlog = () => {
 
       return (
             <div>
+                  <Header />
+
                   <h1 className='text-lime-700 flex justify-center text-4xl'>Write Your Blog Here</h1>
                   <div className='flex justify-center'>
                         <form onSubmit={handleSubmit} className="w-4/5 lg:w-2/5 md:w-3/5">
@@ -84,6 +90,11 @@ const WriteBlog = () => {
                               </button>
                         </form>
                   </div>
+
+
+                  <PopularPosts />
+                  <Tags />
+                  <Footer />
             </div>
       );
 };
