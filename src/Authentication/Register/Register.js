@@ -17,7 +17,7 @@ const Register = () => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        console.log(regInfo?.email, regInfo?.password, regInfo?.name, navigate);
+        createUser(regInfo?.email, regInfo?.password, regInfo?.name, navigate);
 
     }
 
