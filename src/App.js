@@ -7,6 +7,7 @@ import Login from './Authentication/Login/Login';
 import Register from './Authentication/Register/Register';
 import AuthProvider from './Context/AuthProvider';
 import About from './Pages/About.js/About';
+import Contact from './Pages/Contact/Contact';
 import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
 import WriteBlog from './Pages/WriteBlog/WriteBlog';
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="writeblog" element={<WriteBlog />} />
+          <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
