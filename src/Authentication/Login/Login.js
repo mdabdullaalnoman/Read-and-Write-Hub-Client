@@ -17,8 +17,12 @@ const Login = () => {
         const value = e.target.value;
         setloginInfo(prev => ({ ...prev, [field]: value }))
     }
+    const handleGoogleSignin=()=>{
+        googleSignIn(navigation, location)
+    }
     const handleForm = e => {
         e.preventDefault()
+        console.log(loginInfo)
         emailSignIn(loginInfo?.email, loginInfo?.password, navigation, location)
     }
 
@@ -81,7 +85,7 @@ const Login = () => {
 
                     <div className="flex flex-row gap-2">
                         <button
-                            onClick={googleSignIn}
+                            onClick={handleGoogleSignin}
                             className="bg-green-600 text-white w-full p-2 flex flex-row justify-center gap-2 items-center rounded-sm hover:bg-green-600 duration-100 ease-in-out">
                             Google
                         </button>

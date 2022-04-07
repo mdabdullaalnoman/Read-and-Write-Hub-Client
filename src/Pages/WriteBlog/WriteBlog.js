@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
+import useBlogs from '../../Hooks/useBlogs';
 import Footer from '../../SharedComponent/Footer';
 import Header from '../../SharedComponent/Header';
 import PopularPosts from '../../SharedComponent/PopularPosts';
 import Tags from '../../SharedComponent/Tags';
 
 const WriteBlog = () => {
-
-      const [blogInfo, setblogInfo] = useState({})
+const {postBlog} = useBlogs()
+ const [blogInfo, setblogInfo] = useState({})
 
       const handleChange = e => {
             e.preventDefault()
@@ -18,6 +19,7 @@ const WriteBlog = () => {
       const handleSubmit = e => {
             e.preventDefault()
             console.log(blogInfo);
+            postBlog(blogInfo);
       }
 
       return (
