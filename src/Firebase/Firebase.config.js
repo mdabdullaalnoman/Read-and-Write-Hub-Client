@@ -1,9 +1,9 @@
 const firebaseConfig = {
-      apiKey: "AIzaSyD6YIW3XlBvBdm4dc15XVJnsiOZv0QJh2I",
-      authDomain: "write-hub-9edfa.firebaseapp.com",
-      projectId: "write-hub-9edfa",
-      storageBucket: "write-hub-9edfa.appspot.com",
-      messagingSenderId: "284954166906",
-      appId: "1:284954166906:web:5d5d3bceaa47cb39b01dc3",
+  apiKey: "AIzaSyAivtuIsl3Z9kERZd2oYCYY4nowz_EduY8",
+  authDomain: "write-hub-72916.firebaseapp.com",
+  projectId: "write-hub-72916",
+  storageBucket: "write-hub-72916.appspot.com",
+  messagingSenderId: "650230656162",
+  appId: "1:650230656162:web:87d86dca7ee7970af07bfb"
 };
 export default firebaseConfig;
