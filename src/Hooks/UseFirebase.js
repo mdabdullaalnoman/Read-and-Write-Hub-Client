@@ -19,7 +19,9 @@ const useFirebase = () => {
             setIsLoading(true)
             signInWithPopup(auth, GoogleProvider)
                   .then((result) => {
-                        // saveUser(user.email, user.displayName, 'PUT')
+
+                        saveUser(user.email.toLowerCase(), user.displayName.toLowerCase(), 'PUT')
+                        console.log(user.email, user.displayName)
                         setAuthError('')
                         const destination = location?.state?.from || '/'
                         navigate(destination)
@@ -39,9 +41,10 @@ const useFirebase = () => {
                   .then((userCredential) => {
                         setAuthError('')
                         const newUser = { email, displayName: name }
+                        console.log(userCredential, newUser)
                         setuser(newUser)
 
-                        // saveUser(email, name, 'POST')
+                        saveUser(email.toLowerCase() ,name.toLowerCase(),  'POST')
 
                         updateProfile(auth.currentUser, {
                               displayName: name
@@ -60,13 +63,13 @@ const useFirebase = () => {
                   .finally(() => setIsLoading(false));
       }
 
-      const emailSignIn = (email, password, location, navigate) => {
+      const emailSignIn = (email, password, navigate, location) => {
             setIsLoading(true)
             signInWithEmailAndPassword(auth, email, password)
                   .then((userCredential) => {
                         const destination = location?.state?.from || '/';
                         navigate(destination)
-
+                        alert("Sign in")
                   })
                   .catch((error) => {
                         setError(error.message)
@@ -93,16 +96,16 @@ const useFirebase = () => {
       //             .then(data => setAdmin(data.admin))
       // }, [user.email])
 
-      // const saveUser = (email, displayName, method) => {
-      //       const user = { email, displayName }
-      //       fetch('https://peaceful-citadel-92019.herokuapp.com/user', {
-      //             method: method,
-      //             headers: {
-      //                   'content-type': 'application/json'
-      //             },
-      //             body: JSON.stringify(user)
-      //       })
-      // }
+      const saveUser = (email, displayName, method) => {
+            const user = { email, displayName }
+            fetch('https://writehubs.herokuapp.com/users', {
+                  method: method,
+                  headers: {
+                        'content-type': 'application/json'
+                  },
+                  body: JSON.stringify(user)
+            })
+      }
 
       const logOut = () => {
             setIsLoading(true)
