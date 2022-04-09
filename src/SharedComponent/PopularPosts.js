@@ -1,4 +1,5 @@
 import { faFacebook, faInstagram, faPinterest, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { FaFacebookF, FaTwitter, FaInstagram, FaPinterest } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
@@ -90,10 +91,10 @@ const PopularPosts = () => {
 					<div className="text-gray-500 mr-12">
 						Looking for some free blog sites to help you start sharing your writing with the world? Whether you just want to share updates with your family and friends or you want to start a blog and build a broader audience, we’ve put together ten great sites where you can start a blog for free.We’ll also try to steer you towards the specific platform that’s best for you so that you can easily create a blog for free.The main characteristic of this platform is that it comes with drag-and-drop options, so you don’t have to handle anything in the back-end. The design is very intuitive and modern, which can be used by both beginners and advanced.</div>
 					<div className="mt-6">
-						<FontAwesomeIcon className="mr-4 h-6 w-6" icon={faFacebook} />
-						<FontAwesomeIcon className="mr-4 h-6 w-6" icon={faTwitter} />
-						<FontAwesomeIcon className="mr-4 h-6 w-6" icon={faInstagram} />
-						<FontAwesomeIcon className="mr-4 h-6 w-6" icon={faPinterest} />
+						<FaFacebookF className="mr-4 h-6 w-6 inline"/> 
+						<FaTwitter  className="mr-4 h-6 w-6 inline"/>
+						<FaInstagram  className="mr-4 h-6 w-6 inline"/>
+						<FaPinterest  className="mr-4 h-6 w-6 inline"/>
 					</div>
 				</div>
 				<div>
