@@ -13,9 +13,15 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "firebase": "^9.6.10",
+<<<<<<< HEAD
     "font-awesome": "^4.7.0",
     "google-maps-react": "^2.0.6",
     "mapbox-gl": "^2.7.1",
+=======
+    "google-maps-react": "^2.0.6",
+    "mapbox-gl": "^2.7.1",
+    "font-awesome": "^4.7.0",
+>>>>>>> f5bf3e48f4db79f314f6c1a4bbe770397663d92a
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-font": "^1.2.1",

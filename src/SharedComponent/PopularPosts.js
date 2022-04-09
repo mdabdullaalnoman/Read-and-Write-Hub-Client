@@ -1,6 +1,4 @@
-import { faFacebook, faInstagram, faPinterest, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FaFacebookF, FaTwitter, FaInstagram, FaPinterest } from 'react-icons/fa';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
 const PopularPosts = () => {
