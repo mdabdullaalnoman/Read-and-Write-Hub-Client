@@ -10,6 +10,7 @@ import About from './Pages/About.js/About';
 import Contact from './Pages/Contact/Contact';
 import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
+import ViewPost from './Pages/ViewPost/ViewPost';
 import WriteBlog from './Pages/WriteBlog/WriteBlog';
 
 const App = () => {
@@ -22,6 +23,9 @@ const App = () => {
           <Route path="about" element={<About />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="/blogs/:id" element={<ViewPost/>}/>
+           
+          
           <Route path="writeblog" element={<WriteBlog />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
