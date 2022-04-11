@@ -6,14 +6,17 @@ import {
 import Login from './Authentication/Login/Login';
 import Register from './Authentication/Register/Register';
 import AuthProvider from './Context/AuthProvider';
+import useAuth from './Hooks/useAuth';
 import About from './Pages/About.js/About';
 import Contact from './Pages/Contact/Contact';
 import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
 import ViewPost from './Pages/ViewPost/ViewPost';
 import WriteBlog from './Pages/WriteBlog/WriteBlog';
+import PrivateRoute from './privateRoute/PrivateRoute';
 
 const App = () => {
+  
   return (
     <AuthProvider>
       <BrowserRouter>
@@ -26,7 +29,11 @@ const App = () => {
           <Route path="/blogs/:id" element={<ViewPost/>}/>
            
           
-          <Route path="writeblog" element={<WriteBlog />} />
+          <Route path="/writeblog" element={
+          <PrivateRoute>
+ <WriteBlog />
+          </PrivateRoute>
+         } />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
