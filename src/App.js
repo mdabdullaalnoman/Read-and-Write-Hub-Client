@@ -6,9 +6,12 @@ import {
 import Login from './Authentication/Login/Login';
 import Register from './Authentication/Register/Register';
 import AuthProvider from './Context/AuthProvider';
-import useAuth from './Hooks/useAuth';
 import About from './Pages/About.js/About';
 import Contact from './Pages/Contact/Contact';
+import Approve from './Pages/Dashboard/Approve';
+import Chart from './Pages/Dashboard/Chart';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import Setting from './Pages/Dashboard/Setting';
 import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
 import ViewPost from './Pages/ViewPost/ViewPost';
@@ -16,7 +19,7 @@ import WriteBlog from './Pages/WriteBlog/WriteBlog';
 import PrivateRoute from './privateRoute/PrivateRoute';
 
 const App = () => {
-  
+
   return (
     <AuthProvider>
       <BrowserRouter>
@@ -26,15 +29,23 @@ const App = () => {
           <Route path="about" element={<About />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
-          <Route path="/blogs/:id" element={<ViewPost/>}/>
-           
-          
+          <Route path="/blogs/:id" element={<ViewPost />} />
+
+
           <Route path="/writeblog" element={
-          <PrivateRoute>
- <WriteBlog />
-          </PrivateRoute>
-         } />
+            <PrivateRoute>
+              <WriteBlog />
+            </PrivateRoute>
+          } />
+
           <Route path="contact" element={<Contact />} />
+
+          <Route path="dashboard" element={<Dashboard />} >
+            <Route path="approve" element={<Approve />} />
+            <Route path="chart" element={<Chart />} />
+            <Route path="setting" element={<Setting />} />
+          </Route>
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
