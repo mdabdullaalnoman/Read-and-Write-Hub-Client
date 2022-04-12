@@ -4,13 +4,18 @@ import useAuth from '../../Hooks/useAuth';
 
 
 const Login = () => {
+    const { googleSignIn, emailSignIn,user } = useAuth()
 
     const [loginInfo, setloginInfo] = useState({})
     const navigation = useNavigate()
     const location = useLocation()
-
-    const { googleSignIn, emailSignIn } = useAuth()
-
+    
+    const redirect_uri = location.state?.from || '/'
+    if (user.email) {
+        navigation(redirect_uri);
+    }
+  
+    
     const handleInput = e => {
         e.preventDefault()
         const field = e.target.name;
