@@ -29,11 +29,26 @@ useEffect(()=>{
 },[])
 
     
-
+const confirmBlog = id => {
+    const uniqueId = { blogId: id }
+    fetch('https://writehubs.herokuapp.com/blogs/confirm', {
+        method: 'PUT',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(uniqueId)
+    })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            return alert('Blog Confirm')
+        })
+}
 
 return {
     postBlog ,
-    blogs
+    blogs,
+    confirmBlog
 }
 }
 export default useBlogs;
