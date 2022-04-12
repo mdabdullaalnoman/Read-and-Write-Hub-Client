@@ -13,7 +13,7 @@ const {postBlog} = useBlogs()
             e.preventDefault()
             const field = e.target.name;
             const value = e.target.value;
-            setblogInfo(prev => ({ ...prev, [field]: value }))
+            setblogInfo(prev => ({ ...prev, [field]: value, status: false }))
       }
 
       const handleSubmit = e => {
