@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 const useBlogs=()=>{
 
     const [blogs, setBlogs]= useState([]);
+    const [dataLoad, setDataLoad]= useState(false)
     
 const postBlog=(blog)=>{
     fetch('https://writehubs.herokuapp.com/blogs', {
@@ -24,9 +25,9 @@ useEffect(()=>{
     .then(res=> res.json())
     .then(data=> {
         setBlogs(data)
-        console.log(data)
+        setDataLoad(false)
     })
-},[])
+},[dataLoad])
 
     
 const confirmBlog = id => {
@@ -40,15 +41,37 @@ const confirmBlog = id => {
     })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            setDataLoad(data.acknowledged)
             return alert('Blog Confirm')
         })
+}
+
+
+const deletBlog = id => {
+    const proceed = window.confirm('Are you Sure to delete this blog? ')
+    if (proceed) {
+        const url = `https://writehubs.herokuapp.com/blogs/${id}`;
+        fetch(url, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    alert('Delete Succesfully');
+                    const reminddoctors = blogs.filter(doctor => doctor._id !== id)
+                    setBlogs(reminddoctors)
+                }
+            })
+
+    }
+
 }
 
 return {
     postBlog ,
     blogs,
-    confirmBlog
+    confirmBlog,
+    deletBlog
 }
 }
 export default useBlogs;
