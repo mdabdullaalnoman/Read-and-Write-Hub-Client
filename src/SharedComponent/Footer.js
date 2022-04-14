@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
 	return (
 		<div>
-			<div className="grid grid-cols-4 gap-4 bg-black text-gray-500 py-16 px-16">
+			<div className="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2 gap-4 bg-black text-gray-500 py-16 px-16">
      <div>
 		 <div>
 			 <h3 className="pb-6 text-white text-base font-bold">QUICK LINKS</h3>
