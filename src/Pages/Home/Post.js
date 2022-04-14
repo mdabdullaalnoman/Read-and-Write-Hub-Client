@@ -1,4 +1,5 @@
 import useBlogs from '../../Hooks/useBlogs';
+import { Link } from 'react-router-dom';
 
 const Post = () => {
 
@@ -15,7 +16,7 @@ const Post = () => {
                             </div>
                             <div className="blog-content  p-4">
                                 <p className='text-gray-500 font-semibold'>{post.date}</p>
-                                <h3 className='font-serif text-2xl font-large py-5'>{post.title}</h3>
+                                <Link to={`/blogs/${post._id}`} style={{ textDecoration: 'none' }}><h3 className='font-serif text-2xl font-large py-5'>{post.title}</h3></Link>
                                 <p className='font-sans text-gray-500'>{post.blog}</p>
                                 <p className='pt-5 text-blue-600 text-lg font-semibold'>{post.category}</p>
                             </div>
