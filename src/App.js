@@ -11,6 +11,7 @@ import Contact from './Pages/Contact/Contact';
 import Approve from './Pages/Dashboard/Approve';
 import Chart from './Pages/Dashboard/Chart';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import MyBlogs from './Pages/Dashboard/MyBlogs';
 import Setting from './Pages/Dashboard/Setting';
 import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
@@ -36,6 +37,7 @@ const App = () => {
           <Route path="dashboard" element={<Dashboard />} >
             <Route path="approve" element={<Approve />} />
             <Route path="chart" element={<Chart />} />
+            <Route path="myBlogs" element={<MyBlogs/>} />
             <Route path="setting" element={<Setting />} />
           </Route>
 
