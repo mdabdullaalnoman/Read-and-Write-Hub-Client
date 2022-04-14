@@ -17,7 +17,7 @@ import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
 import ViewPost from './Pages/ViewPost/ViewPost';
 import WriteBlog from './Pages/WriteBlog/WriteBlog';
-import PrivateRoute from './privateRoute/PrivateRoute';
+
 
 const App = () => {
 
