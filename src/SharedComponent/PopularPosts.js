@@ -14,7 +14,7 @@ const PopularPosts = () => {
 				</div>
 
 			</div>
-			<div className="grid grid-cols-3 gap-4">
+			<div className="grid lg:grid-cols-3 gap-4 md:grid-cols-3 sm:grid-cols-1">
 				<div className="flex flex-col ml-12">
 
 					<div className="flex flex-cols-2 gap-4">
@@ -86,6 +86,9 @@ const PopularPosts = () => {
 					</div>
 				</div>
 				<div className="">
+				<div className="">
+					<h2 className="text-3xl font-semibold my-12">About WriteHub</h2>
+				</div>
 					<div className="text-gray-500 mr-12">
 						Looking for some free blog sites to help you start sharing your writing with the world? Whether you just want to share updates with your family and friends or you want to start a blog and build a broader audience, we’ve put together ten great sites where you can start a blog for free.We’ll also try to steer you towards the specific platform that’s best for you so that you can easily create a blog for free.The main characteristic of this platform is that it comes with drag-and-drop options, so you don’t have to handle anything in the back-end. The design is very intuitive and modern, which can be used by both beginners and advanced.</div>
 					<div className="mt-6">

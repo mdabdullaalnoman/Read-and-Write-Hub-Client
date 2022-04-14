@@ -8,7 +8,7 @@ const About = () => {
     return (
         <div>
 			<Header />
-        <div  className="mx-40">
+        <div  className="lg:mx-40 md:mx-40 sm:mx-10">
             <div>
                 <h1 className="text-center text-6xl font-semibold my-12">Learn More About Us.</h1>
             </div>
@@ -16,7 +16,7 @@ const About = () => {
                <img className="mx-auto my-12" src="https://i.ibb.co/TtZxr6z/Best-Blogging-Sites.png" alt="" />
             </div>
             <div>
-              <h2 className="mb-12 font-bold text-xl">
+              <h2 className="mb-12 md:text-xl font-bold text-xl">
                 A blog is a type of website where the content is presented in reverse chronological order (newer content appear first). Blog content is often referred to as entries or “blog posts”.Blogs are typically run by an individual or a small group of people to present information in a conversational style. However, now there are tons of corporate blogs that produce a lot of informational and thought-leadership style content.
                </h2>
                <h3 className="text-gray-500 my-12 ">
