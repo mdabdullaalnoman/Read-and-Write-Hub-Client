@@ -17,6 +17,7 @@ import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
 import ViewPost from './Pages/ViewPost/ViewPost';
 import WriteBlog from './Pages/WriteBlog/WriteBlog';
+import PrivateRoute from './privateRoute/PrivateRoute';
 
 
 const App = () => {
@@ -31,7 +32,12 @@ const App = () => {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="/blogs/:id" element={<ViewPost />} />
-          <Route path="writeblog" element={<WriteBlog />} />
+          <Route path="writeblog" element=
+          {
+          <PrivateRoute>
+          <WriteBlog />
+          </PrivateRoute>
+         } />
           <Route path="contact" element={<Contact />} />
 
           <Route path="dashboard" element={<Dashboard />} >
