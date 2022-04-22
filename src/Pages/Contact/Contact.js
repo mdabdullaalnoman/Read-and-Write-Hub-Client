@@ -8,7 +8,7 @@ const Contact = () => {
 	return (
 		<div>
 			<Header />
-		<div  className="mx-40">
+		<div  className="lg:mx-40 md:mx-40 sm:mx-10">
 			
 			<div>
                 <h1 className="text-center text-6xl font-semibold my-12">Feel Free To Contact Us.</h1>
@@ -72,7 +72,7 @@ const Contact = () => {
 <textarea id="floating_message" rows="4" className="block py-2.5 px-0 w-full text-sm text-gray-500 dark:text-gray-400 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="Your message"></textarea>
 
 </div>
-<button type="submit" className="text-white bg-black hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto mx-40 my-12 px-80 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+<button type="submit" className="text-white bg-black hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full md:mx-auto md:px-60 sm:w-auto lg:mx-40 my-12 lg:px-80 py-2.5 sm:px-40 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
 </form>
 
 			</div>

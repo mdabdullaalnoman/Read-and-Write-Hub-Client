@@ -97,7 +97,7 @@ const useFirebase = () => {
       // }, [user.email])
 
       const saveUser = (email, displayName, method) => {
-            const user = { email, displayName }
+            const user = { email, displayName, admin: false }
             fetch('https://writehubs.herokuapp.com/users', {
                   method: method,
                   headers: {

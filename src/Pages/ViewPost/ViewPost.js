@@ -1,11 +1,17 @@
+import data from '@mapbox/mapbox-gl-directions/src/reducers';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
+import useComments from '../../Hooks/useComments';
 
 const ViewPost = () => {
     const { id } = useParams();
+    const {user}= useAuth();
+    const {postComments, comments, dataLoad}= useComments();
+    const [blogComment, setBlogComment]= useState([]);
 
     const [comment, setComment] = useState({})
-
+    console.log(dataLoad)
     const [blog, setBlog] = useState({});
     useEffect(() => {
         const url = ` https://writehubs.herokuapp.com/blogs/${id}`
@@ -15,16 +21,22 @@ const ViewPost = () => {
 
             )
     }, [id])
-
+    useEffect(() => {
+        if (id) {
+            const blogComments = comments.filter(comment => comment.blog_id === id);
+            setBlogComment(blogComments)
+            
+        }
+    }, [comments, id])
     const handleOnclick = e => {
         const field = e.target.name;
         const value = e.target.value;
-        setComment(prev => ({ ...prev, [field]: value }))
+        setComment(prev => ({ ...prev, [field]: value , blog_id: id}))
     }
 
     const handleSubmit = e => {
         e.preventDefault()
-        console.log(comment);
+        postComments(comment);
     }
 
     return (
@@ -36,16 +48,27 @@ const ViewPost = () => {
                 <p className='my-2.5 font-light'>{blog?.blog}</p>
             </div>
             <div className='ml-28 my-12'>
-                <p className='text-4xl font-semibold my-9'>1 Comments</p>
+            <p className='text-4xl font-semibold my-9'>{blogComment.length} Comments</p>
+                {
+                    blogComment.map(comment=><div>
+                          
                 <div className='w-1/2 flex justify-between items-center'>
                     <img style={{ width: '100px' }} src='https://cdn-icons.flaticon.com/png/512/2202/premium/2202112.png?token=exp=1649742284~hmac=da511d3d1e48ccdea0b125ae03d58f4e' alt="" />
                     <div>
-                        <p className='text-2xl font-medium'>Fahim Faysal Siyam</p>
-                        <p>This is a very useful post and I am keen to learn about this more.</p>
+                        <p className='text-2xl font-medium'>{comment.name}</p>
+                        <p>{comment.messeage}</p>
                     </div>
                 </div>
+                    </div>
+
+                    )
+                }
+              
             </div>
-            <p className='text-4xl font-medium ml-28 my-12'>Add Comment</p>
+
+            {
+                user?.email && <div>
+                      <p className='text-4xl font-medium ml-28 my-12'>Add Comment</p>
             <div className='flex flex-col justify-center items-center'>
                 <form onSubmit={handleSubmit} className='w-3/5'>
                     <div className='border-b border-teal-500'>
@@ -63,6 +86,9 @@ const ViewPost = () => {
                     <button className='p-2 mt-10 text-white w-50 bg-blue-600' type='submit'>Submit</button>
                 </form>
             </div>
+                </div>
+            }
+          
         </div>
     );
 };

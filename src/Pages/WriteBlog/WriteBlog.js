@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import useAuth from '../../Hooks/useAuth';
 import useBlogs from '../../Hooks/useBlogs';
 import Footer from '../../SharedComponent/Footer';
 import Header from '../../SharedComponent/Header';
@@ -7,13 +8,14 @@ import Tags from '../../SharedComponent/Tags';
 
 const WriteBlog = () => {
 const {postBlog} = useBlogs()
+const {user}= useAuth()
  const [blogInfo, setblogInfo] = useState({})
 
       const handleChange = e => {
             e.preventDefault()
             const field = e.target.name;
             const value = e.target.value;
-            setblogInfo(prev => ({ ...prev, [field]: value }))
+            setblogInfo(prev => ({ ...prev, [field]: value, status: false , author: user.displayName, email: user.email}))
       }
 
       const handleSubmit = e => {
