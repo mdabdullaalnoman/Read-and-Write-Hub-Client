@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
+
+
 const Dashboard = () => {
+    const {user}= useAuth()
+    console.log(user)
     return (
         <div>
             <div className="dashboard grid grid-cols-6">
