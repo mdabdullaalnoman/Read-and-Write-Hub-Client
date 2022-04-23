@@ -13,6 +13,10 @@ const MyBlogs = () => {
         }
     }, [blogs, user.email])
     return (
+<<<<<<< HEAD
+        <div>
+            my blogs
+=======
         <div class="flex flex-col mt-8">
             <div class="py-2 -my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
                 <div class="inline-block min-w-full overflow-hidden align-middle border-b border-gray-200 shadow sm:rounded-lg">
@@ -90,6 +94,7 @@ const MyBlogs = () => {
                     </table>
                 </div>
             </div>
+>>>>>>> a9a5782736c5b149e3198eb044a16f1e12fab11b
         </div>
     );
 };
