@@ -1,25 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaPinterest } from 'react-icons/fa';
 import { Link, Outlet } from 'react-router-dom';
-import Footer from '../../SharedComponent/Footer';
-import Header from '../../SharedComponent/Header';
+import DashboardNav from './DashboardNav';
 
 const Dashboard = () => {
+    // for dashboard navbar toggle
+    const [dashToggle, setDashToggle] = useState(true);
+    const handleDashToggle = () => {
+        console.log(dashToggle);
+        if (dashToggle === false) {
+            setDashToggle(true)
+        }
+        else {
+            setDashToggle(false)
+        }
+    }
+
     return (
         <div>
-            <div>
-                <Header />
-                <div className="dashboard grid grid-cols-[300px_minmax(900px,_1fr)]">
-                    <div className="sidebar flex flex-col min-h-screen bg-violet-900 text-white p-5">
-                        <Link to="/dashboard/approve">Approve</Link>
-                        <Link to="/dashboard/chart">Chart </Link>
-                        <Link to="/dashboard/myBlogs">My Blogs</Link>
-                        <Link to="/dashboard/setting">Setting</Link>
-                    </div>
-                    <Outlet />
+            <div className="dashboard grid grid-cols-6">
+                <div className={` sidebar flex flex-col min-h-screen bg-darker text-white border-r-2 border-primaryDarker p-5  `} >
+                    <Link to="/dashboard/approve" className='flex  items-center	'><span className='pr-3'><FaPinterest /></span>Approve</Link>
+                    <Link to="/dashboard/chart" className='flex  items-center'><span className='pr-3'><FaPinterest /></span>Chart </Link>
+                    <Link to="/dashboard/myBlogs" className='flex  items-center	'><span className='pr-3'><FaPinterest /></span>My Blogs</Link>
+                    <Link to="/dashboard/setting" className='flex  items-center	'><span className='pr-3'><FaPinterest /></span>Setting</Link>
                 </div>
-                <Footer />
+
+                <div className={`col-span-5`}>
+                    <DashboardNav dashToggleF={handleDashToggle} dashToggle={dashToggle} />
+                    <div className='bg-darker'>
+                        <Outlet />
+                    </div>
+                </div>
             </div>
         </div>
+
     );
 };
 
