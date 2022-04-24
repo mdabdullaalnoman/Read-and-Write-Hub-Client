@@ -1,4 +1,3 @@
-import data from '@mapbox/mapbox-gl-directions/src/reducers';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
@@ -72,13 +71,13 @@ const ViewPost = () => {
             <div className='flex flex-col justify-center items-center'>
                 <form onSubmit={handleSubmit} className='w-3/5'>
                     <div className='border-b border-teal-500'>
-                        <input onChange={handleOnclick} class=" appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 my-3 leading-tight focus:outline-none " type="text" name='name' placeholder="Your Name" aria-label="Full name" />
+                        <input onChange={handleOnclick} className=" appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 my-3 leading-tight focus:outline-none " type="text" name='name' placeholder="Your Name" aria-label="Full name" />
                     </div>
                     <div className='border-b border-teal-500'>
-                        <input onChange={handleOnclick} class=" appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 my-3 leading-tight focus:outline-none" type="text" name='email' placeholder="Your Email" aria-label="Full name" />
+                        <input onChange={handleOnclick} className=" appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 my-3 leading-tight focus:outline-none" type="text" name='email' placeholder="Your Email" aria-label="Full name" />
                     </div>
                     <div className='border-b border-teal-500'>
-                        <input onChange={handleOnclick} class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 my-3 leading-tight focus:outline-none " type="text" name='website' placeholder="Website" aria-label="Full name" />
+                        <input onChange={handleOnclick} className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 my-3 leading-tight focus:outline-none " type="text" name='website' placeholder="Website" aria-label="Full name" />
                     </div>
                     <div className='border-b border-teal-500'>
                         <textarea onChange={handleOnclick} className='appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none' name="messeage" placeholder='Your Messeage' id="" cols="30" rows="8"></textarea>
