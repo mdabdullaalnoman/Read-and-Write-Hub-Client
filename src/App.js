@@ -6,7 +6,7 @@ import {
 import Login from './Authentication/Login/Login';
 import Register from './Authentication/Register/Register';
 import AuthProvider from './Context/AuthProvider';
-import About from './Pages/About.js/About';
+import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
 import Approve from './Pages/Dashboard/Approve';
 import Chart from './Pages/Dashboard/Chart';

@@ -1,0 +1,34 @@
+.s-content__header {
+	font-size: 48px;
+	line-height: 1;
+}
+
+.spacing {
+	margin-left: 160px;
+	margin-right: 160px;
+}
+
+@media only screen and (max-width:640px) {
+	.s-content__header {
+	   font-size: 45px;
+	}
+	.spacing {
+		margin-left: 120px;
+		margin-right: 120px;
+	}
+ 
+ }
+ @media only screen and (max-width:800px) {
+	.s-content {
+	   padding-top: 96px;
+	}
+ 
+	.s-content__header {
+	   font-size: 34px;
+	}
+	.spacing {
+		margin-left: 40px;
+		margin-right: 40px;
+	}
+ 
+ }

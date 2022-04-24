@@ -1,0 +1,33 @@
+.feature1 {
+	background-image: url(https://i.ibb.co/YbF4RqF/6-450x380.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 250px;
+	text-align: center;
+  }
+  .feature2 {
+	background-image: url(https://i.ibb.co/1Tp0CYS/6-2-450x380.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 250px;
+	text-align: center;
+  }
+  .feature3 {
+	background-image: url(https://i.ibb.co/vwvJMb2/contact-450x380.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 250px;
+	text-align: center;
+  }
+  
+  .feature1 button,
+  .feature2 button,
+  .feature3 button {
+	margin-top: 120px;
+	padding:5px;
+	background-color: white;
+	color: black;
+  }
