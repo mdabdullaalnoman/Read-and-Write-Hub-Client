@@ -3,7 +3,14 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Libre: ['Libre Baskerville', 'serif'],
+        Nanum: ['Nanum Gothic', 'sans-serif'],
+        Open: ['Open Sans', 'sans-serif'],
+        Inter: ['Inter', 'sans-serif'],
+      }
+    },
   },
   plugins: [
     
