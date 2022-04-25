@@ -8,6 +8,7 @@ import FAQ from './FAQ/FAQ';
 import Hero from './Hero';
 import Post from './Post';
 import Subscribe from './Subscribe/Subscribe';
+import Review from './Testimonial/Review';
 
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
             <Post />
             <Subscribe />
             <FAQ />
+            <Review />
             <PopularPosts />
             <Tags />
             <Footer />
