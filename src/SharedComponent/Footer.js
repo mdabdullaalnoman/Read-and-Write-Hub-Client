@@ -1,7 +1,6 @@
 import React from "react";
 
 const Footer = () => {
-<<<<<<< HEAD
 	return (
 		<div>
 			<div className="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2 gap-4 bg-black text-gray-500 py-16 px-16">
@@ -64,55 +63,6 @@ const Footer = () => {
   </div>
 </form>
 	</div>
-=======
-  return (
-    <div>
-      <div className="grid sm:grid-cols-3  lg:grid-cols-4 gap-2 bg-black text-gray-500 py-8 px-4 lg:py-16 lg:px-16 text-2xl text-center sm:text-sm mx-auto">
-        <div className="mt-8 sm:mt-0">
-          <div>
-            <h3 className="pb-6 text-white text-base font-bold">QUICK LINKS</h3>
-          </div>
-          <hr />
-          <div className="pt-4">
-            <div>Home</div>
-            <div>Blog</div>
-            <div>Styles</div>
-            <div>About</div>
-            <div>Contact</div>
-            <div>Privacy Policy</div>
-          </div>
-        </div>
-
-        <div className="mt-8 sm:mt-0">
-          <div>
-            <h3 className="pb-6 text-white text-base font-bold">ARCHIVES</h3>
-          </div>
-          <hr />
-          <div className="pt-4">
-            <div>January 2021</div>
-            <div>December 2020</div>
-            <div>November 2019</div>
-            <div>October 2018</div>
-            <div>September 2017</div>
-            <div>August 2017</div>
-          </div>
-        </div>
-
-        <div className="mt-8 sm:mt-0">
-          <div>
-            <h3 className="pb-6 text-white text-base font-bold">SOCIAL</h3>
-          </div>
-          <hr />
-          <div className="pt-4">
-            <div>Facebook</div>
-            <div>Instagram</div>
-            <div>Twitter</div>
-            <div>Pinterest</div>
-            <div>Google+</div>
-            <div>LinkedIn</div>
-          </div>
-        </div>
->>>>>>> 6a3cd78f3b68972cebcffe032b98eb404b98fb49
 
         <div className="sm:col-span-3 lg:col-span-1 mt-8 sm:mt-0">
           <div>
@@ -148,21 +98,12 @@ const Footer = () => {
           </form>
         </div>
       </div>
-      <div className="bg-black sm:pl-16 text-gray-500 pb-8 text-center pl-0">
-        &copy; Copyright Writehub 2022 &nbsp;&nbsp;|&nbsp;&nbsp; Site template
-        by <span className="text-white"> Bloomer</span>
-      </div>
-    </div>
-<<<<<<< HEAD
 	<div className="bg-black pl-16 text-gray-500 pb-16 font-Nanum">
 		&copy; Copyright Writehub 2022 &nbsp;&nbsp;|&nbsp;&nbsp;  Site template by <span className="text-white font-Open"> Bloomer</span>
 	</div>
 		</div>
 		
 	);
-=======
-  );
->>>>>>> 6a3cd78f3b68972cebcffe032b98eb404b98fb49
 };
 
 export default Footer;
