@@ -3,6 +3,7 @@ import React from 'react';
 import {
   BrowserRouter, Route, Routes
 } from "react-router-dom";
+import AdminRoute from './AdminRoute/AdminRoute';
 import Login from './Authentication/Login/Login';
 import Register from './Authentication/Register/Register';
 import AuthProvider from './Context/AuthProvider';
@@ -28,6 +29,7 @@ const App = () => {
         <Routes>
           
           <Route path="home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
@@ -40,7 +42,11 @@ const App = () => {
          } />
           <Route path="contact" element={<Contact />} />
 
-          <Route path="dashboard" element={<Dashboard />} >
+          <Route path="dashboard" element={
+          <AdminRoute>
+  <Dashboard />
+          </AdminRoute>
+        } >
             <Route path="approve" element={<Approve />} />
             <Route path="chart" element={<Chart />} />
             <Route path="myBlogs" element={<MyBlogs/>} />

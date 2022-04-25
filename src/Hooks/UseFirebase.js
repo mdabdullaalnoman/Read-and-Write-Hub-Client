@@ -90,11 +90,11 @@ const useFirebase = () => {
             return () => unsubscribe
       }, [])
 
-      // useEffect(() => {
-      //       fetch(`https://peaceful-citadel-92019.herokuapp.com/users/${user?.email}`)
-      //             .then(res => res.json())
-      //             .then(data => setAdmin(data.admin))
-      // }, [user.email])
+      useEffect(() => {
+            fetch(`https://writehubs.herokuapp.com/users/${user?.email}`)
+                  .then(res => res.json())
+                  .then(data => setAdmin(data.admin))
+      }, [user.email])
 
       const saveUser = (email, displayName, method) => {
             const user = { email, displayName, admin: false }

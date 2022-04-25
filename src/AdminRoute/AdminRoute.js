@@ -8,6 +8,7 @@ import useAuth from '../Hooks/useAuth';
 
 const AdminRoute = ({ children}) => {
     const {  isLoading, admin } = useAuth();
+    console.log(admin)
     const location= useLocation()
     if (isLoading) {
         return 'isLoading';
