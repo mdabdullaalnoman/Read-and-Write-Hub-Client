@@ -3,21 +3,20 @@ import { Link } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
 
 const Header = () => {
-    const {logOut}= useAuth()
- 
+    const { logOut, user } = useAuth()
+    console.log(user);
     return (
-        
+
         <div>
             <nav className="bg-black border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-800">
                 <div className="container flex flex-wrap justify-between items-center mx-auto">
                     <Link to="/home" href="https://flowbite.com" className="flex items-center">
-                        {/* <img src="/docs/images/logo.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" /> */}
                         <span className="self-center text-xl font-semibold whitespace-nowrap text-white dark:text-white">Writehub</span>
                     </Link>
                     <div className="flex items-center md:order-2">
                         <button type="button" className="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
                             <span className="sr-only">Open user menu</span>
-                            <img className="w-8 h-8 rounded-full bg-white" src="/docs/images/people/profile-picture-3.jpg" alt="img" />
+                            <img className="w-8 h-8 rounded-full bg-white" src={user.photoURL} alt="img" />
                         </button>
                         {/* <!-- Dropdown menu --> */}
                         <div className="hidden z-50 my-4 text-base list-none bg-black rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown">
@@ -64,9 +63,13 @@ const Header = () => {
                             <li>
                                 <Link to="/login" href="#" className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-gray-400 md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">Login</Link>
                             </li>
-                            <li>
-                                <Link to="/logout" href="#" className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-gray-400 md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700" onClick={logOut}>Logout</Link>
-                            </li>
+                            {
+                                user.photoURL &&
+                                <li>
+                                    <button href="#" className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-gray-400 md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700" onClick={logOut}>Logout</button>
+                                </li>
+                            }
+
                             <li>
                                 <Link to="/register" href="#" className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-gray-400 md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">Register</Link>
                             </li>
@@ -75,7 +78,7 @@ const Header = () => {
                                 <Link to="/contact" href="#" className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-gray-400 md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">Contact</Link>
                             </li>
                             <li>
-                                <Link to="/dashboard" href="#" className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-gray-400 md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">Dashboard</Link>
+                                <Link to="/dashboard/approve" href="#" className="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 dark:text-gray-400 md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">Dashboard</Link>
                             </li>
                         </ul>
                     </div>

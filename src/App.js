@@ -26,24 +26,24 @@ const App = () => {
     <AuthProvider>
       <BrowserRouter>
         <Routes>
-          
+          <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="/blogs/:id" element={<ViewPost />} />
           <Route path="writeblog" element=
-          {
-          <PrivateRoute>
-          <WriteBlog />
-          </PrivateRoute>
-         } />
+            {
+              <PrivateRoute>
+                <WriteBlog />
+              </PrivateRoute>
+            } />
           <Route path="contact" element={<Contact />} />
 
           <Route path="dashboard" element={<Dashboard />} >
             <Route path="approve" element={<Approve />} />
             <Route path="chart" element={<Chart />} />
-            <Route path="myBlogs" element={<MyBlogs/>} />
+            <Route path="myBlogs" element={<MyBlogs />} />
             <Route path="setting" element={<Setting />} />
           </Route>
 
