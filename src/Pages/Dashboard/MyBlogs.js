@@ -5,7 +5,7 @@ import useBlogs from '../../Hooks/useBlogs';
 const MyBlogs = () => {
     const { user } = useAuth();
     const [myBlogs, setMyBlogs] = useState([]);
-    const { blogs, confirmBlog, deletBlog } = useBlogs();
+    const { blogs, deletBlog } = useBlogs();
 
     useEffect(() => {
         if (user.email) {
@@ -13,6 +13,7 @@ const MyBlogs = () => {
             setMyBlogs(myBlogsData)
         }
     }, [blogs, user.email])
+    console.log(user);
     return (
         <div>
             <div>
@@ -24,16 +25,13 @@ const MyBlogs = () => {
                                     ID
                                 </th>
                                 <th scope="col" className="px-6 py-3">
-                                    Name
+                                    Title
                                 </th>
                                 <th scope="col" className="px-6 py-3">
                                     Created As
                                 </th>
                                 <th scope="col" className="px-6 py-3">
-                                    Status
-                                </th>
-                                <th scope="col" className="px-6 py-3">
-                                    Approve
+                                    Creator
                                 </th>
                                 <th scope="col" className="px-6 py-3">
                                     Delete
@@ -44,24 +42,16 @@ const MyBlogs = () => {
                         <tbody>
                             {myBlogs.map(blog => <tr key={blog._id} className="bg-white dark:bg-gray-800">
                                 <th scope="row" className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                    {blog.title}
+                                    {blog._id}
                                 </th>
                                 <td className="px-6 py-4">
-                                    {blog.topic}
+                                    {blog.title}
                                 </td>
                                 <td className="px-6 py-4">
-                                    Accessories
+                                    {user.displayName}
                                 </td>
                                 <td className="px-6 py-4">
-                                    $99
-                                </td>
-
-                                <td className="px-6 py-4">
-                                    <button onClick={() => confirmBlog(blog._id)} className="px-4 py-1 text-sm text-white bg-blue-400 rounded">
-                                        {
-                                            blog.status ? 'Approve' : 'Pending'
-                                        }
-                                    </button>
+                                    <img src={user.photoURL} alt="creator" className='h-10 w-10 rounded' />
                                 </td>
 
                                 <td className="px-6 py-4">
