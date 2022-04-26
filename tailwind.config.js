@@ -14,7 +14,7 @@ module.exports = {
         'darker': '#12263f',
         'darks': '#152e4d',
         'whiter': '#ecfeff',
-        'primaryDarker': '#155e75'
+        'primaryDarker': '#155e75',
       },
     },
   },
